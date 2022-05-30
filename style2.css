@@ -159,21 +159,17 @@ img {
 
 /*----------------------FIM----------------------*/
 
-/*main*/
+/* [CONFIGURANDO O MAIN]-------------------------*/
 .conteudo {
     grid-area: conteudo;
     background-color: var(--cor2);
-    padding: 20px;
-   
-   
-    
+    padding: 20px;  
 }
 .conteudo strong {
     font-weight: normal;
     padding: 2px 6px;
     background-color: var(--cor1);
 }
-
 .linkgeral {
     color: var(--cor6);
     background-color: var(--cor8);
@@ -185,29 +181,6 @@ img {
 .linkgeral:hover {
     background-color: var(--cor7);
 
-}
-
-
-
-
-/* ASIDE flex box*/
-#evolucao { /* pai*/
-    display: flex;
-    flex-flow: row wrap;
-}
-#evolucao h3 {
-    text-align: left;
-    font-family: var(--fonte-android);
-    padding-top: 10px;
-}
-#evolucao p {
-    text-indent: 40px;
-}
-.evl {
-    padding: 10px;
-    margin: 10px;
-    background-color: var(--cor1);
-    flex: 250px;
 }
 /* [ configurando video ] */
 div.video {
@@ -221,9 +194,22 @@ div.video iframe {
     left: 5%;
     width: 90%;
     height: 90%;
-}
-/*aside*/
+}/* fim vidio */
 /* [ QUER APRENDER MAIS ] */
+#aprenderMais {
+    display: flex;
+    flex-direction: column;  
+    list-style-type: none;
+}
+#aprenderMais li{
+    padding: 10px 0px 10px 0px;
+}
+
+
+
+
+/*aside*/
+/* [CONTEUDO EXTRA] barra lateral*/
 .conteudoExtra {
     grid-area: conteudoExtra;
     background-color: var(--co12);
@@ -238,19 +224,37 @@ div.video iframe {
     margin: -10px -10px 0px -10px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    color: var(--cor6);
-    
+    color: var(--cor6);   
 }
-#aprenderMais {
+
+/* ASIDE flex box*/
+#evolucao { /* pai*/
     display: flex;
-    flex-direction: column;
-    
-    
-    list-style-type: none;
+    flex-flow: row wrap;
 }
-#aprenderMais li{
-    padding: 10px 0px 10px 0px;
+.conteudoExtra > h2 {
+    text-align: center;
+    font-family: var(--fonte-android);
+    color: var(--cor7);
+
 }
+#evolucao h3 {
+    text-align: center;
+    font-family: var(--fonte-android);
+    padding-top: 10px;
+}
+#evolucao p {
+    text-indent: 40px;
+}
+.evl {
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--cor1);
+    flex: 250px;
+}
+
+
+
 
 /*foot*/
 .rodape {
@@ -315,7 +319,7 @@ div.video iframe {
 
 @media screen and (min-width:1280px) {
     body {
-        font-size: 2em;
+        font-size: 1.1em;
     }
     /* CONFIGURANDO GRID LAYTE*/
     .pagina {
@@ -327,6 +331,14 @@ div.video iframe {
         *row-gap: 4px;
         grid-template-columns: 300px 4fr 2fr;
     }
+    .cabecalho > h1 {
+        font-size: 2.6em;
+    }
+    .cabecalho > p {
+        font-size: 1.5em;
+    }
+
+
 
     .itensMenu {
         flex-direction: column;
@@ -342,6 +354,12 @@ div.video iframe {
     }
     .dropdown {
         left: 300px;
+        
+    }
+
+    .dropdown li {
+        width: 100%;
+        padding: 10px 40px 10px 40px;
     }
 
 }
